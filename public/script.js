@@ -40,10 +40,11 @@ const start = () => {
             clearInterval(timer)
             clearInterval(interval)
             document.getElementById("timer").innerText = "SELESAI!"
+            window.alert("SELESAI!")
         }
     }, 1000)
 
-    interval = setInterval(moveLeft, 300)
+    interval = setInterval(moveLeft, 400)
 
     document.addEventListener("mousedown", ev => {
         if (count > 0) {moveRight()}
