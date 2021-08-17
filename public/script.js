@@ -8,8 +8,8 @@ const player2 = document.getElementById("player2")
 
 let pos = 0
 
-const COM_SPEED = 1
-const PLAYER_SPEED = 1
+const COM_SPEED = 5
+const PLAYER_SPEED = 7
 let START = false
 let END = false
 let TIME = 10
@@ -37,7 +37,7 @@ window.onload = () => {
       }, 100)
 
       timer = setInterval(() => {
-        if (TIME <= 0) {
+        if (TIME <= 0 || Math.abs(pos) > 100) {
           END = true
           clearInterval(START)
           clearInterval(timer)
