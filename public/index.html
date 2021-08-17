@@ -1,32 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Tug of War</title>
-</head>
-<body>
-    <div class="container-sm" id="lapangan">
-        <h1 id="timer">Waktu Main: 10 detik</h1>
-        <h1 id="winner">Tarik Tambang</h1>
-        <div id="game">
-            <div id="player1"></div>
-            <div id="player2"></div>
-            <div id="mark"></div>
-            <div id="rope"></div>
-            <div id="line"></div>
-        </div>
-        <div class="d-flex justify-content-sm">
-            <button type="button" id="start" class="btn btn-primary my-5"
-                    onclick="start()">Start
-            </button>
-        </div>
+  </head>
+  <body>
+    <h1>Tarik Tambang</h1>
+    <div>Waktumu: <span id="sisa-waktu">10</span></div>
+    <div style="margin-top: 30px">
+      <strong style="width: 100px; display: inline-block; text-align: right"
+        >COM</strong
+      >
+      vs
+      <input
+        style="width: 100px; display: inline-block"
+        type="text"
+        id="player2"
+        value="Player2"
+      />
     </div>
-</body>
-<script src="script.js"></script>
+    <div class="lapangan">
+      <div class="permainan" id="game">
+        <div class="player">
+          <img src="https://robohash.org/COM?set=set3" alt="" />
+        </div>
+        <div class="tali">
+          <div class="tanda"></div>
+        </div>
+        <div class="player player2">
+          <img src="https://robohash.org/player2?set=set3" alt="" />
+        </div>
+      </div>
+      <div class="tanah">
+        <div class="tanda"></div>
+      </div>
+    </div>
+    <div class="aksi">
+      <button id="tarik">Tarik</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
