@@ -48,11 +48,25 @@ window.onload = () => {
           )
         } else {
           TIME--
-        }
+                 }
         duration.innerText = TIME
+        if(END) {
+          let ulang = confirm("Mau Main Lagi?");
+          if (ulang) {
+            $(document).ready(function () {
+              $('meta[name="description"]').remove();
+              $("head").append('<meta http-equiv="refresh" content="0.1">');
+            });
+          }
+          else{
+            alert("Baiqlah")
+          }
+        }
+       
       }, 1000)
     }
     move(PLAYER_SPEED)
+
   }
 
   pull.addEventListener("click", start)
