@@ -1,91 +1,83 @@
-* {
-    padding: 0;
-    margin: 0;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  flex-direction: column;
 }
 
-#timer {
-    text-align: center;
-    margin-top: 2em;
+img {
+  width: auto;
+  max-width: 100%;
 }
 
-#winner {
-    text-align: center;
+.lapangan {
+  border-bottom: solid 5px gray;
+  width: 300px;
+  position: relative;
+  margin-top: 80px;
 }
 
-#start {
-    margin: auto;
+.permainan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-#game {
-    width: 500px;
-    height: 300px;
-    border: 1px solid black;
-    margin: auto;
+.lapangan .player {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  display: block;
+  border-radius: 50%;
+}
+.lapangan .tali {
+  border-top: solid 1px gray;
+  position: relative;
+  flex: 1;
 }
 
-#player1 {
-    width: 20px;
-    height: 50px;
-    background-color: red;
-    position: relative;
-    top: 250px;
+.lapangan .tanda {
+  border: solid 15px transparent;
+  border-bottom: solid 15px green;
+  width: 0px;
+  justify-self: center;
 }
 
-#player2 {
-    width: 20px;
-    height: 50px;
-    background-color: blue;
-    position: relative;
-    top: 200px;
-    left: 480px;
+.tanah {
+  margin-top: -26px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-#mark {
-    width: 20px;
-    height: 20px;
-    background-color: green;
-    position: relative;
-    top: 165px;
-    left: 240px;
-    border-radius: 50%;
+.tali .tanda {
+  position: absolute;
+  border: solid 10px transparent;
+  border-top: solid 10px red;
+  width: 0px;
+  left: calc(50% - 10px);
 }
 
-#rope {
-    width: 500px;
-    height: 5px;
-    background-color: black;
-    position: relative;
-    top: 153px;
+.player2 img {
+  transform: scaleX(-1);
 }
 
-#line {
-    width: 10px;
-    height: 300px;
-    background-color: brown;
-    position: relative;
-    left: 245px;
-    bottom: 125px;
+.aksi {
+  margin-top: 30px;
 }
 
-/*.animate{*/
-/*    animation: jump 500ms;*/
-/*}*/
-/*@keyframes jump {*/
-/*    0%{top: 150px;}*/
-/*    30%{top: 100px;}*/
-/*    70%{top: 100px;}*/
-/*    100%{top: 150px;}*/
-/*}*/
-/*#block {*/
-/*    width: 20px;*/
-/*    height: 20px;*/
-/*    background-color: blue;*/
-/*    position: relative;*/
-/*    top: 130px;*/
-/*    left: 480px;*/
-/*    animation: block 1s infinite linear;*/
-/*}*/
-/*@keyframes block {*/
-/*    0%{left: 480px;}*/
-/*    100%{left: -40px;}*/
-/*}*/
+#tarik {
+  padding: 10px 30px;
+  font-weight: bold;
+  border: none;
+  font-size: 1.2em;
+  background-color: orange;
+  color: white;
+  box-shadow: 0px 5px 10px #aaa;
+}
+
+#tarik:active {
+  transform: scale(1.4);
+  background-color: red;
+}
