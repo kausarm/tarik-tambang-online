@@ -43,7 +43,7 @@ const start = () => {
         }
     }, 1000)
 
-    interval = setInterval(moveLeft, 500)
+    interval = setInterval(moveLeft, 300)
 
     document.addEventListener("mousedown", ev => {
         if (count > 0) {moveRight()}
